@@ -2,7 +2,7 @@ import fs from 'fs';
 
 let alunos;
 
-fs.readFile('./alunos.json', (erro, dados) => {
+fs.readFile('./aluns.json', (erro, dados) => {
     if(erro) {
         console.error(erro);
         return;
