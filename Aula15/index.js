@@ -2,14 +2,13 @@ import { getPeople } from "./starWarsService.js";
 
 async function main() {
     const starWarsPeople = await getPeople(1);
-    const starWarsPeopleFiltered = starWarsPeople
-    .filter(person => {
-        return person.gender === 'female'})
-    .map(person => {
-        return {name: person.name, gender: person.gender}
-    });
+    const totalHeight = starWarsPeople.reduce((total, person) => {
+        total += Number(person.height);
 
-    console.log(starWarsPeopleFiltered)
+        return total;
+    }, 0);
+
+    console.log('Média de altura:', totalHeight/starWarsPeople.lenght);
 }
 
 main();
