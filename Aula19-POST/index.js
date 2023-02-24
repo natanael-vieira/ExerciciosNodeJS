@@ -31,8 +31,8 @@ app.get('/users/:userId', (request, response) => {
     return response.send(user);
 });
 
-app.post('users', (request, response) => {
+app.post('/users', (request, response) => {
     const newUser = request.body;
     users.push(newUser);
     return response.status(201).send(newUser);
-})
+});
