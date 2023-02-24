@@ -5,6 +5,8 @@ const PORT = 3000;
 let users = [
     {id: 1, name: 'Natan Vieira', age: 35},
     {id: 2, name: 'Thais Vieira', age: 35},
+    {id: 3, name: 'Abigail Vieira', age: 4},
+    {id: 4, name: 'Rute Vieira', age: 0},
 ]
 
 app.listen(PORT, () => {
