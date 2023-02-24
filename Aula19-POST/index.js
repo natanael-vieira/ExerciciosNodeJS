@@ -1,4 +1,5 @@
 import express from 'express';
+import {StatusCodes} from 'http-status-codes';
 
 const app = express();
 const PORT = 3000;
@@ -8,6 +9,7 @@ let users = [
     {id: 3, name: 'Abigail Vieira', age: 4},
     {id: 4, name: 'Rute Vieira', age: 0},
 ]
+
 app.use(express.json());
 
 
@@ -33,6 +35,8 @@ app.get('/users/:userId', (request, response) => {
 
 app.post('/users', (request, response) => {
     const newUser = request.body;
+
     users.push(newUser);
-    return response.status(201).send(newUser);
+
+    return response.status(StatusCodes.CREATED).send(newUser);
 });
