@@ -8,6 +8,8 @@ let users = [
     {id: 3, name: 'Abigail Vieira', age: 4},
     {id: 4, name: 'Rute Vieira', age: 0},
 ]
+app.use(express.json());
+
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
@@ -28,3 +30,9 @@ app.get('/users/:userId', (request, response) => {
     })
     return response.send(user);
 });
+
+app.post('users', (request, response) => {
+    const newUser = request.body;
+    users.push(newUser);
+    return response.status(201).send(newUser);
+})
