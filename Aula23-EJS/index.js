@@ -1,4 +1,5 @@
 import express from 'express';
+import * as ArticleService from './ArticleService.js';
 
 
 const app = express();
@@ -12,5 +13,6 @@ app.listen(PORT, () => {
 });
 
 app.get('/', (request, response) => {
-    response.render('pages/home', {title: 'EJS'});
+    const articles = ArticleService.getArticle();
+    response.render('pages/home', {title: 'EJS', articles});
 });
