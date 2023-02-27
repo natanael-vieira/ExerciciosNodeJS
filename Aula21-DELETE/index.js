@@ -61,5 +61,5 @@ app.delete('/users/:userId', (request, response) => {
 
     users = users.filter((user) => user.id !== Number(userId));
 
-    return response.status(StatusCoddes.NO_CONTENT).send();
+    return response.status(StatusCodes.NO_CONTENT).send();
 });
