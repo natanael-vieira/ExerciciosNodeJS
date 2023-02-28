@@ -1,12 +1,12 @@
 const articles = [
     {
         id: 1,
-        title: 'Healttech de "telemedicina aumentada" chega ao Brasil',
+        title: 'Healthtech de "telemedicina aumentada" chega ao Brasil',
         description: 'Loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum.'
     },
     {
         id: 2,
-        title: 'Testa: entregas caem com lockdown na China',
+        title: 'Tesla: entregas caem com lockdown na China',
         description: 'Loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum, loren ipsum.'
     }
 ];
@@ -17,7 +17,7 @@ function getArticle() {
 
 function getArticleById(articleId) {
     return articles.find(article => {
-        article.id === Number(articleId)
+        return article.id === Number(articleId)
     });
 }
 
