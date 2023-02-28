@@ -16,3 +16,8 @@ app.get('/', (request, response) => {
     const articles = ArticleService.getArticle();
     response.render('pages/home', {title: 'EJS', articles});
 });
+app.get('/artigos/:articleId', (request, response) => {
+    const articleId = request.params.articleId;
+    const article = ArticleService.getArticleById(articleId);
+    response.render('pages/artigos', {title: article.title, article})
+});
